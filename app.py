@@ -5,7 +5,7 @@ from groq import Groq
 app = Flask(__name__)
 
 # Initialize Groq client. Insert your free API key here:
-client = Groq(api_key='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')
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
