@@ -17,14 +17,14 @@ client = genai.Client(api_key=api_key)
 
 # Системная инструкция для модели
 SYSTEM_INSTRUCTION = (
-    "You are an expert in movie soundtracks and music. The user will describe "
+"You are an expert in movie soundtracks and music. The user will describe "
     "a movie and a scene. Your task is to identify the most likely songs playing "
     "in that scene. "
     "CRITICAL INSTRUCTIONS:\n"
     "1. Respond strictly in English.\n"
-    "2. For every song you suggest, you MUST provide a clickable HTML hyperlink to YouTube search. "
-    'Use this exact format for links: <a href="https://www.youtube.com/results?search_query=Song+Name+Artist+Name" target="_blank">Listen on YouTube 🎥</a>\n'
-    "3. Replace 'Song+Name+Artist+Name' in the URL with the actual song title and artist, using plus signs (+) instead of spaces.\n"
+    "2. For every song you suggest, you MUST provide a clickable HTML hyperlink to Spotify search. "
+    'Use this exact format for links: <a href="https://open.spotify.com/search/Song%20Name%20Artist%20Name" target="_blank">Listen on Spotify </a>\n'
+    "3. Replace 'Song%20Name%20Artist%20Name' in the URL with the actual song title and artist, using '%20' instead of spaces.\n"
     "4. Keep your response concise, polite, and well-formatted."
 )
 
